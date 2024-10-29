@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather App</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <main class="background">
+    <div class="container">
+      <nav>
+        <button id="about-us">ABOUT</button>
+        <button id="diy">DIY</button>
+        <button id="contact">CONTACT US</button>
+      </nav>
+
+      <div class="divider"><hr></div>
+      <div class="search-area">
+        <label for="search">Find Your Area coordinates:</label>
+        <button id="search-btn">Find</button>
+      </div>
+      <div class="divider"> <hr></div>
+      <div id="weather-data">
+      </div>
+      
+      <div id="forecast">
+        <div>Day 1</div>
+        <div>Day 2</div>
+        <div>Day 3</div> 
+      </div>
+      <br>
+      <footer>
+        <div class="footer-left">
+          <p>Weather App</p>
+          <p>WDD 330 Class Project</p>
+          <p>Kampala, Uganda</p>
+      </div>
+
+      <div class="footer-right">
+          <p>
+              <span id="currentyear"></span> Developed By Steven Ssebuma 🇺🇬 
+          </p>
+          <p id="lastModified">last</p>
+      </div>
+      </footer>
+    </div>
+  </main>
+
+   <!-- About Us Modal -->
+   <div id="about-modal" class="modal">
+      <div class="modal-content">
+        <span class="close" id="close-about">&times;</span>
+        <h2>About Weather App</h2>
+        <p>This application helps users get real-time weather updates and forecast data based on their location. It is designed to help users especially village health teams to acertain the weather of the area so they can plan better. It is part of a class final project to showcase how APIs can be used to retrieve weather information.</p>
+      </div>
+    </div>
+
+  <!-- DIY Modal -->
+  <div id="diy-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="close-diy">&times;</span>
+      <h2>DIY - Enable Geolocation</h2>
+      <p>To use the weather guide app efficiently, ensure your browser has access to your location:</p>
+      <ul>
+        <li>Go to your browser settings.</li>
+        <li>Find the "Location" section under privacy or security settings -> permissions.</li>
+        <li>Type in the site url, then open its permissions and allow this website to access your location.</li>
+        <li>Reload the page and press "Find" to get the weather for your area.</li>
+        <li>Alternatively.</li>
+        <li>Click on the "Find" button on the site. The site will prompt you to allow it to access your location. Click "Allow", then it will upload the information for you.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Contacts Modal -->
+  <div id="contact-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" id="close-contact">&times;</span>
+      <h2>Contact Us</h2>
+      <form id="contact-form" method="POST">
+        <label for="name">Name:<br>
+        <input type="text" id="name" name="name" required></label>
+
+        <label for="email">Email:<br>
+        <input type="email" id="email" name="email" required></label>
+
+        <label for="whatsapp">WhatsApp Number:<br>
+        <input type="tel" id="whatsapp" name="whatsapp" placeholder="+256 000 0000" required></label>
+
+        <label for="feedback">Your Feedback:<br>
+        <textarea id="message" name="message" rows="4" required></textarea></label>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>
